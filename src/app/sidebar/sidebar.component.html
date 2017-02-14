@@ -1,0 +1,40 @@
+<div style="width: 100%;
+overflow:auto;">
+   <div style="float:left; width: 40%">
+     <table class="table table-striped table-hover ">
+  <thead>
+    <tr >
+      <th (click)="changeSorting('name')">Car</th>
+      <th (click)="changeSorting('year')">year</th>
+      <th (click)="changeSorting('make')">make</th>
+      <th (click)="changeSorting('model')">model</th>
+      
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of jsonProductList;let count=index"  >
+     <td>{{item.name}}</td>
+     
+
+      
+      <td>{{item.year}}</td>
+       <td>{{item.make}}</td>
+     
+      <td>{{item.model}}</td>
+  <td><a (click)="clicked(count)">View Details</a></td>
+      
+    </tr>
+  </tbody>
+</table> 
+   </div>
+   <div style="float:right;width: 55%;">
+     <h1>{{selCarName}}</h1>
+     
+    <p word-break: break-all >{{selCarDesc}}</p>
+   </div>
+</div>
+
+
+
+
